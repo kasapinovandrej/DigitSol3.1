@@ -67,3 +67,9 @@ p {
   justify-content: center;
   align-items: center;
 }
+.active {
+  background: $color1;
+}
+.hide {
+  display: none;
+}
