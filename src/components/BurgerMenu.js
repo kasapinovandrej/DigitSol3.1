@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { VscMenu, VscChromeClose } from 'react-icons/vsc';
+
 const BurgerMenu = () => {
     const [modal, setModal] = useState(false)
 
