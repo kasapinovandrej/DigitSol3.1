@@ -1,0 +1,30 @@
+$color1: #197daa;
+$color2: #4e9bbd;
+$color3: #95bace;
+$color4: #ffffff;
+$color4-hover: #c4c2c2;
+$color5: #197ba963;
+$color6: hsla(199, 74%, 38%, 0.14);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  position: relative;
+}
