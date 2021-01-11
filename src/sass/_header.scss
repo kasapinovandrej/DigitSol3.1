@@ -1,0 +1,44 @@
+header {
+  background: $color2;
+  @include flexCenter;
+}
+.header {
+  width: 114rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: $bp--576) {
+    justify-content: center;
+  }
+  &__contact {
+    display: flex;
+  }
+
+  &__social {
+    @media only screen and (max-width: $bp--576) {
+      display: none;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color4;
+    margin: 0 0.5rem;
+    &:hover {
+      color: $color4-hover;
+    }
+  }
+
+  &__icon {
+    margin-right: 0.5rem;
+    color: $color4;
+    &:hover {
+      color: $color4-hover;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-right: 0.2rem;
+    }
+  }
+}

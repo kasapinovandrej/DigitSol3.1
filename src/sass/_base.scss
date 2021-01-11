@@ -6,6 +6,14 @@ $color4-hover: #c4c2c2;
 $color5: #197ba963;
 $color6: hsla(199, 74%, 38%, 0.14);
 
+//bp
+$bp--1200: 74.98em;
+$bp--992: 61.98em;
+$bp--767: 47.98em;
+$bp--576: 35.98em;
+$bp--361: 22.98em;
+// @media only screen and (max-width: $bp--1200) {}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,4 +35,35 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   position: relative;
+  @media only screen and (max-width: $bp--1200) {
+    font-size: 1.1rem;
+  }
+  @media only screen and (max-width: $bp--992) {
+    font-size: 1rem;
+  }
+  @media only screen and (max-width: $bp--767) {
+    font-size: 0.9rem;
+  }
+  @media only screen and (max-width: $bp--576) {
+    font-size: 0.8rem;
+  }
+  @media only screen and (max-width: $bp--361) {
+    font-size: 0.7rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+p {
+  margin: 0 1rem;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
