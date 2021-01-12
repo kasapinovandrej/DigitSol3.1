@@ -1,0 +1,24 @@
+.reasons {
+  display: flex;
+  justify-content: center;
+  background: $color6;
+  margin: 2rem 0;
+  transition: transform 1s, opacity 1s;
+  &__wrap {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140rem;
+  }
+  &__h1 {
+    margin-left: 10rem;
+    color: $color1;
+    font-size: 4rem;
+    width: 50%;
+    text-transform: uppercase;
+  }
+  &__img {
+    height: 30rem;
+  }
+}
