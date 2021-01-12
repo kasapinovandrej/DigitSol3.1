@@ -1,0 +1,100 @@
+.swiper {
+  @include flexCenter;
+
+  &__wrap {
+    width: 140rem;
+    height: 50rem;
+    @include flexCenter;
+    @media only screen and (max-width: $bp--1400) {
+      width: 120rem;
+      height: 45rem;
+    }
+    @media only screen and (max-width: $bp--1200) {
+      width: 99.2rem;
+      height: 43rem;
+    }
+    @media only screen and (max-width: $bp--992) {
+      width: 76.7rem;
+      height: 35rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      width: 57.6rem;
+      height: 30rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 36.7rem;
+      height: 45rem;
+    }
+    @media only screen and (max-width: $bp--361) {
+      width: 30rem;
+    }
+  }
+  &__slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    @media only screen and (max-width: $bp--576) {
+      flex-direction: column;
+    }
+  }
+  &__text {
+    height: inherit;
+    width: 50%;
+    @include flexCenter;
+    @media only screen and (max-width: $bp--576) {
+      width: 100%;
+      height: 30%;
+    }
+  }
+  &__imagebox {
+    display: flex;
+    height: inherit;
+    width: 50%;
+    @media only screen and (max-width: $bp--576) {
+      width: 100%;
+      height: 70%;
+      justify-content: center;
+    }
+  }
+  &__image {
+    width: 100%;
+    align-self: flex-end;
+    @media only screen and (max-width: $bp--576) {
+      height: inherit;
+      width: auto;
+      align-self: center;
+    }
+  }
+  &__h1 {
+    color: $color1;
+    font-size: 5rem;
+    @media only screen and (max-width: $bp--1200) {
+      font-size: 3.5rem;
+    }
+    @media only screen and (max-width: $bp--992) {
+      font-size: 3rem;
+    }
+  }
+  &__h4 {
+    color: $color1;
+    font-size: 2rem;
+    @media only screen and (max-width: $bp--1200) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $bp--992) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: $color1 !important;
+  @media only screen and (max-width: $bp--767) {
+    display: none !important;
+  }
+}
+.swiper-pagination-bullet-active {
+  background-color: $color1 !important;
+}

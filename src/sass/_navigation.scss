@@ -19,7 +19,7 @@
   &__list {
     display: flex;
     color: $color4;
-    transition: all 0.2s;
+    transition: all 0.5s;
     &:hover {
       background: $color1;
     }
@@ -52,6 +52,15 @@
     @media only screen and (min-width: $bp--767) {
       display: none;
     }
+    @media only screen and (max-width: $bp--576) {
+      font-size: 1.5rem;
+      right: 3rem;
+      height: 3rem;
+      width: 3rem;
+    }
+    @media only screen and (max-width: $bp--361) {
+      right: 1.5rem;
+    }
   }
 
   &__modalbg {
@@ -64,6 +73,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 8;
   }
   &__modallists {
     font-size: 2rem;

@@ -26,6 +26,7 @@ header {
     align-items: center;
     color: $color4;
     margin: 0 0.5rem;
+    transition: all 0.5s;
     &:hover {
       color: $color4-hover;
     }
@@ -34,6 +35,7 @@ header {
   &__icon {
     margin-right: 0.5rem;
     color: $color4;
+    transition: all 0.5s;
     &:hover {
       color: $color4-hover;
     }
