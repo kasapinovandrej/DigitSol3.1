@@ -1,0 +1,41 @@
+.mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrap {
+    display: flex;
+    width: 140rem;
+    justify-content: space-evenly;
+    background: $color1;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    transition: all 0.5s;
+  }
+  &__img {
+    width: 8rem;
+    margin: 1rem;
+    @media only screen and (max-width: $bp--992) {
+      width: 5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 4.5rem;
+    }
+  }
+  &__p {
+    color: $color4;
+    text-align: center;
+    font-size: 2rem;
+    @media only screen and (max-width: $bp--992) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      font-size: 1rem;
+    }
+  }
+}

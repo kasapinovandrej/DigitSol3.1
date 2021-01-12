@@ -11,9 +11,9 @@ const Header = () => {
                     <a className="header__link" href="mailto:office@digitalsolution.rs"><ImMail3 /><p>office@digitalsolution.rs</p></a>
                 </div>
                 <div className="header__contact header__social">
-                    <a className="header__link" target="_blank" href="https://www.facebook.com/digitalsolution.web"><ImFacebook2 className="header__icon" /></a>
-                    <a className="header__link" target="_blank" href="https://www.instagram.com/digitalsolution_web/?igshid=31pkfchkf6cd"><ImInstagram className="header__icon" /></a>
-                    <a className="header__link" target="_blank" href="https://www.linkedin.com/in/digital-solution-6581831bb/"><ImLinkedin className="header__icon" /></a>
+                    <a className="header__link" target="_blank" rel="noreferrer" href="https://www.facebook.com/digitalsolution.web"><ImFacebook2 className="header__icon" /></a>
+                    <a className="header__link" target="_blank" rel="noreferrer" href="https://www.instagram.com/digitalsolution_web/?igshid=31pkfchkf6cd"><ImInstagram className="header__icon" /></a>
+                    <a className="header__link" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/digital-solution-6581831bb/"><ImLinkedin className="header__icon" /></a>
                 </div>
             </div>
         </header>
