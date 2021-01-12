@@ -1,0 +1,112 @@
+.contact {
+  @include flexCenter;
+  background-image: linear-gradient(to right top, #b9d8e5, #209fd8);
+  &__wrap {
+    width: 140rem;
+    height: 40rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+  }
+  &__textWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__spaceman {
+    position: absolute;
+    width: 15rem;
+    right: 0;
+    top: -12.5rem;
+    @media only screen and (max-width: $bp--1200) {
+      display: none;
+    }
+  }
+  &__rocket {
+    position: absolute;
+    width: 25rem;
+    bottom: -3.5rem;
+    left: 0;
+    @media only screen and (max-width: $bp--992) {
+      display: none;
+    }
+  }
+  &__astronaut {
+    position: absolute;
+    right: 0;
+    bottom: -3.5rem;
+    width: 20rem;
+    @media only screen and (max-width: $bp--992) {
+      display: none;
+    }
+  }
+  &__h1 {
+    text-align: center;
+    color: $color4;
+    font-size: 5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-top: 4rem;
+    @media only screen and (max-width: $bp--767) {
+      font-size: 4rem;
+    }
+  }
+  &__btn {
+    border: none;
+    height: 6rem;
+    width: 60rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    color: $color4;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    box-shadow: 0 5px 5px rgba(51, 51, 51, 0.15);
+    background-image: linear-gradient(to bottom, #288bf1, #78bef2);
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      background-image: linear-gradient(to top, #288bf1, #78bef2);
+    }
+    &:active {
+      transform: translateY(5px);
+      box-shadow: 0 5px 5px rgba(51, 51, 51, 0.5);
+      background-image: linear-gradient(to top, #2b82de, #2876b2);
+    }
+    &--link {
+      text-decoration: none;
+    }
+    @media only screen and (max-width: $bp--767) {
+      width: 40rem;
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 25rem;
+      font-size: 2rem;
+    }
+  }
+  &__icon {
+    color: $color4;
+    animation: pulsiranje 1s infinite;
+    font-size: 10rem;
+    margin: 3rem 0;
+    z-index: 20;
+  }
+}
+
+@keyframes pulsiranje {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    color: $color1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

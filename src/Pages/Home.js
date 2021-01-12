@@ -6,6 +6,7 @@ import ReasonsSlider from '../components/ReasonsSlider';
 import DigitTime from '../components/DigitTime';
 import BrendDesign from '../components/BrendDesign';
 import Responsive from '../components/Responsive';
+import Contact from '../components/ContactSection';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <DigitTime />
             <BrendDesign />
             <Responsive />
+            <Contact />
         </div>
     )
 }

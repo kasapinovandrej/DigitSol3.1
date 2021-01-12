@@ -8,6 +8,7 @@ import AboutUs from './Pages/About';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
 import BurgerMenu from './components/BurgerMenu';
+import Footer from './components/Footer';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" exact component={Contact} />
           <Route path="/" component={Home} />
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );
