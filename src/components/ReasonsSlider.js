@@ -9,7 +9,6 @@ import Data from '../Data/Data';
 
 SwiperCore.use([Navigation, Pagination]);
 
-console.log(Data);
 
 const ReasonsSlider = () => {
     return (
@@ -24,7 +23,7 @@ const ReasonsSlider = () => {
                 >
                     {Data.map(el => {
                         return (
-                            <SwiperSlide>
+                            <SwiperSlide key={el.title}>
                                 <div className="textslider__box">
                                     <h1 className="textslider__h1">{el.title}</h1>
                                     <p className="textslider__p">{el.text}</p>

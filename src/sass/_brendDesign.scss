@@ -1,0 +1,81 @@
+.design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $color6;
+  margin: 2rem 0;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140rem;
+    position: relative;
+    @media only screen and (max-width: $bp--576) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__box {
+    width: 50%;
+  }
+  &__h1 {
+    color: $color1;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-left: 10rem;
+    @media only screen and (max-width: $bp--992) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  &__p {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: $color1;
+    margin-left: 10rem;
+    @media only screen and (max-width: $bp--767) {
+      font-size: 1.5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+  &__img {
+    width: 35rem;
+    margin-right: 4rem;
+    @media only screen and (max-width: $bp--992) {
+      width: 25rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      width: 20rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-left: 4rem;
+    }
+  }
+  &__pngWrap {
+    margin-left: 10rem;
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    @media only screen and (max-width: $bp--576) {
+      position: relative;
+      margin-left: 0;
+    }
+  }
+  &__png {
+    width: 5rem;
+    @media only screen and (max-width: $bp--767) {
+      width: 3rem;
+    }
+  }
+}

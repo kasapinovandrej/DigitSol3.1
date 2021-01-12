@@ -1,0 +1,47 @@
+.digital {
+  @include flexCenter;
+  background: $color6;
+  margin: 2rem 0;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140rem;
+    @media only screen and (max-width: $bp--576) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__h1 {
+    color: $color1;
+    font-size: 4rem;
+    width: 50%;
+    text-transform: uppercase;
+    @media only screen and (max-width: $bp--992) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-left: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+  &__img {
+    height: 30rem;
+    margin-left: 8rem;
+    @media only screen and (max-width: $bp--992) {
+      height: 25rem;
+      margin-left: 4rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      height: 20rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-left: 0;
+    }
+  }
+}

@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: $color1;
 
   &__wrap {
     display: flex;
     width: 140rem;
     justify-content: space-evenly;
-    background: $color1;
   }
   &__box {
     display: flex;

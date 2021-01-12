@@ -1,0 +1,27 @@
+.responsive {
+  @include flexCenter;
+  &__wrap {
+    width: 140rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__img {
+    width: 60%;
+  }
+  &__textBox {
+    width: 40%;
+  }
+  &__h1 {
+    color: $color1;
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  &__p {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: $color1;
+    width: 100%;
+  }
+}
