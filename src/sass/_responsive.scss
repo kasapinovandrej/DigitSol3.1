@@ -5,17 +5,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: $bp--576) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__img {
     width: 60%;
+    @media only screen and (max-width: $bp--576) {
+      width: 100%;
+    }
   }
   &__textBox {
     width: 40%;
+    text-align: left;
+    @media only screen and (max-width: $bp--576) {
+      width: 100%;
+      text-align: center;
+    }
   }
   &__h1 {
     color: $color1;
     font-size: 4rem;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp--992) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      font-size: 2rem;
+    }
   }
   &__p {
     font-size: 2rem;
@@ -23,5 +43,9 @@
     letter-spacing: 0.1rem;
     color: $color1;
     width: 100%;
+    margin-left: 0;
+    @media only screen and (max-width: $bp--767) {
+      font-size: 1.5rem;
+    }
   }
 }

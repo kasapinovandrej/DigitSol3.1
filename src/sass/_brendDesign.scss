@@ -67,7 +67,11 @@
     position: absolute;
     left: 0;
     bottom: 1rem;
+    @media only screen and (max-width: $bp--767) {
+      display: none;
+    }
     @media only screen and (max-width: $bp--576) {
+      display: initial;
       position: relative;
       margin-left: 0;
     }
