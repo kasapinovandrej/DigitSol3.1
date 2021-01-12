@@ -3,13 +3,17 @@
   justify-content: center;
   background: $color6;
   margin: 2rem 0;
-  transition: transform 1s, opacity 1s;
   &__wrap {
     margin: 2rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 140rem;
+    @media only screen and (max-width: $bp--576) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &__h1 {
     margin-left: 10rem;
@@ -17,8 +21,27 @@
     font-size: 4rem;
     width: 50%;
     text-transform: uppercase;
+    @media only screen and (max-width: $bp--992) {
+      font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
   }
   &__img {
     height: 30rem;
+    @media only screen and (max-width: $bp--992) {
+      height: 25rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      height: 20rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin-left: 4rem;
+    }
   }
 }

@@ -1,0 +1,62 @@
+.textslider {
+  @include flexCenter;
+  &__wrap {
+    width: 140rem;
+    height: 25rem;
+    @include flexCenter;
+    @media only screen and (max-width: $bp--1400) {
+      width: 120rem;
+    }
+    @media only screen and (max-width: $bp--1200) {
+      width: 99.1rem;
+    }
+    @media only screen and (max-width: $bp--992) {
+      width: 76.6rem;
+      height: 35rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      width: 57.5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 36rem;
+    }
+    @media only screen and (max-width: $bp--361) {
+      width: 30rem;
+    }
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__h1 {
+    text-align: center;
+    color: $color1;
+    font-size: 3rem;
+    margin: 2rem 0;
+    @media only screen and (max-width: $bp--992) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin: 1rem 0;
+    }
+  }
+  &__p {
+    text-align: justify;
+    width: 60%;
+    color: $color1;
+    font-size: 2rem;
+    margin: 2rem 0;
+    @media only screen and (max-width: $bp--992) {
+      width: 80%;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 100%;
+      margin: 1rem 0;
+    }
+    @media only screen and (max-width: $bp--361) {
+      font-size: 1.5rem;
+    }
+  }
+}
