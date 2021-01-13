@@ -1,6 +1,7 @@
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './main.scss';
+import ScrollToTop from './Pages/ScrollToTop';
 import Home from './Pages/Home';
 import Portfolio from './Pages/Portfolio';
 import Contact from './Pages/Contact';
@@ -14,12 +15,13 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <div className="App">
+        <ScrollToTop />
         <Header />
         <Navigation />
         <BurgerMenu />
-        <Switch>
+        <Switch >
           <Route path="/portfolio" exact component={Portfolio} />
           <Route path="/about" component={AboutUs} />
           <Route path="/contact" exact component={Contact} />
