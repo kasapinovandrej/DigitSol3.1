@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImFacebook2, ImInstagram, ImLinkedin, ImPhone, ImMail3 } from 'react-icons/im';
+import { ImPhone, ImMail3 } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/img/Boostr-digital-logo.png';
 

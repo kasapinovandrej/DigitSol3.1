@@ -16,18 +16,35 @@
     justify-content: space-evenly;
     align-items: center;
     flex: 1;
+    @media only screen and (max-width: $bp--767) {
+      flex-direction: column;
+    }
   }
   &__info {
     background: $color2;
     width: 40rem;
     margin: 3rem 0;
     border-radius: 5px;
+    @media only screen and (max-width: $bp--1200) {
+      width: 30rem;
+    }
+    @media only screen and (max-width: $bp--992) {
+      width: 25rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      width: 80%;
+      margin: 1rem 0;
+    }
   }
   //   &__a {
   //   }
   &__logo {
     width: 25rem;
     margin: 2rem 0;
+    @media only screen and (max-width: $bp--767) {
+      width: 20rem;
+      margin: 0;
+    }
   }
   &__h3 {
     text-align: center;
@@ -36,6 +53,14 @@
   }
   &__p {
     margin-left: 2rem;
+    @media only screen and (max-width: $bp--992) {
+      font-size: 1.5rem;
+    }
+  }
+  &__a {
+    @media only screen and (max-width: $bp--767) {
+      order: 2;
+    }
   }
   &__linkWrap {
     display: flex;
@@ -55,6 +80,9 @@
     transition: all 0.5s;
     &:hover {
       color: $color4-hover;
+    }
+    @media only screen and (max-width: $bp--992) {
+      font-size: 1.5rem;
     }
   }
   &__ico {
