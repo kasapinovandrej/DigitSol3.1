@@ -8,9 +8,10 @@ const Responsive = () => {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        setInterval(() => {
+        const interval = setInterval(() => {
             setIndex(index => index === 2 ? index = 0 : index + 1)
-        }, 2000)
+        }, 2000);
+        return () => clearInterval(interval);
     }, [])
 
     return (
