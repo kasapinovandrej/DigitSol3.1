@@ -1,0 +1,39 @@
+.marketing {
+  display: flex;
+  justify-content: center;
+  &__pictures {
+    width: 180rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: $bp--1200) {
+      width: 100rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      width: 80rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+    }
+  }
+  &__img {
+    display: flex;
+    width: 20rem;
+    margin: 0 1rem;
+    transition: all 0.5s;
+    @media only screen and (max-width: $bp--1200) {
+      margin: 1rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+    }
+    @media only screen and (max-width: $bp--576) {
+    }
+    &:hover {
+      box-shadow: 0 5px 10px rgba(51, 51, 51, 0.747);
+      transform: scale(1.2);
+      @media only screen and (max-width: $bp--1200) {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
