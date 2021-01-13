@@ -35,8 +35,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div class="footer__rights">
-                <h2 class="footer__textrights">&copy; 2020. Digital Solution. All rights reserved!</h2>
+            <div className="footer__rights">
+                <h2 className="footer__textrights">&copy; 2020. Digital Solution. All rights reserved!</h2>
             </div>
         </footer>
     )
