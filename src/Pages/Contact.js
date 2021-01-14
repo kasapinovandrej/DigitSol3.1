@@ -1,5 +1,6 @@
 import React from 'react'
 import PagesHeader from '../components/PagesHeader';
+import ContactInfo from '../components/ContactComponents/ContactInfo';
 import Hero1 from '../assets/img/CONTACT/Group 716.png';
 import Hero2 from '../assets/img/CONTACT/Group 727.png';
 
@@ -10,9 +11,7 @@ const Contact = () => {
                 img1={Hero1}
                 img2={Hero2}
                 title={'kontakt'} />
-            <div style={{ height: "55vh" }}>
-                Contact us
-            </div>
+            <ContactInfo />
         </>
     )
 }

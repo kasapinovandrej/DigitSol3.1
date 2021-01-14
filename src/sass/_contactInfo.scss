@@ -1,0 +1,114 @@
+.contactinfo {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  @media only screen and (max-width: $bp--576) {
+    margin: 2rem 0;
+  }
+  &__wrap {
+    width: 140rem;
+    text-align: center;
+  }
+  &__h2 {
+    color: $color1;
+    font-size: 3rem;
+    margin: 4rem 0;
+    @media only screen and (max-width: $bp--576) {
+      margin: 2rem 0;
+      font-size: 2rem;
+    }
+  }
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+    @media only screen and (max-width: $bp--576) {
+      flex-direction: column;
+      margin: 2rem 0;
+    }
+  }
+  &__content {
+    margin: 1rem;
+    width: 15rem;
+    height: 12rem;
+    position: relative;
+    @media only screen and (max-width: $bp--576) {
+      //margin: 5rem 0;
+    }
+    &:first-child {
+      &::after {
+        content: "";
+        position: absolute;
+        border-right: 1px solid $color3;
+        height: 12rem;
+        right: 0;
+        top: 0;
+        @media only screen and (max-width: $bp--576) {
+          border-right: none;
+          border-bottom: 1px solid $color3;
+          height: 0;
+          width: 100%;
+          top: 13rem;
+        }
+      }
+    }
+    &:last-child {
+      &::after {
+        content: "";
+        position: absolute;
+        border-left: 1px solid $color3;
+        height: 12rem;
+        left: 0;
+        top: 0;
+        @media only screen and (max-width: $bp--576) {
+          border-right: none;
+          border-bottom: 1px solid $color3;
+          height: 0;
+          width: 100%;
+          top: -1rem;
+        }
+      }
+    }
+  }
+  &__img {
+    height: 5rem;
+    @media only screen and (max-width: $bp--576) {
+      height: 2.5rem;
+    }
+  }
+  &__icon {
+    color: $color1;
+    height: 5rem;
+    font-size: 5rem;
+  }
+  &__h3 {
+    color: $color1;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  &__a {
+    text-decoration: none;
+  }
+  &__p {
+    color: $color1;
+    @media only screen and (max-width: $bp--1200) {
+      font-size: 1.2rem;
+    }
+    &:hover {
+      color: $color3;
+    }
+  }
+  &__h4 {
+    color: $color1;
+    font-size: 3rem;
+    font-weight: 400;
+    display: inline-block;
+    width: 45rem;
+    line-height: 3.5rem;
+    @media only screen and (max-width: $bp--576) {
+      font-size: 2rem;
+      width: 30rem;
+    }
+  }
+}
