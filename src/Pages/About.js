@@ -1,6 +1,9 @@
 import React from 'react';
 import PagesHeader from '../components/PagesHeader';
 import HeroImg from '../assets/img/ABOUT/Group 842.png';
+import Mission from '../components/AboutUsComponent/Mission';
+import Target from '../components/AboutUsComponent/Target';
+
 
 const About = () => {
     return (
@@ -8,9 +11,8 @@ const About = () => {
             <PagesHeader
                 img2={HeroImg}
                 title={'o nama'} />
-            <div style={{ height: "55vh" }}>
-                About us
-        </div>
+            <Mission />
+            <Target />
         </>
     )
 }

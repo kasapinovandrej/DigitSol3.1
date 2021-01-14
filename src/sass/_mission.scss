@@ -1,0 +1,122 @@
+.bluebox {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  &__wrap {
+    position: relative;
+    width: 140rem;
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem 0;
+    @media only screen and (max-width: $bp--576) {
+      margin: 0;
+    }
+  }
+  &__cilj {
+    position: absolute;
+    top: 0;
+    right: 20rem;
+    background: $color1;
+    height: 25rem;
+    width: 60rem;
+    border-top-left-radius: 100px;
+    @media only screen and (max-width: $bp--1200) {
+      right: 5rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      right: 0;
+      width: 55rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      position: inherit;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  &__misija {
+    bottom: 0;
+    left: 20rem;
+    position: absolute;
+    background: $color1;
+    height: 25rem;
+    width: 60rem;
+    border-top-right-radius: 100px;
+    @media only screen and (max-width: $bp--1200) {
+      left: 5rem;
+      width: 55rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      left: 0;
+    }
+    @media only screen and (max-width: $bp--576) {
+      position: inherit;
+      width: 100%;
+    }
+  }
+  &__textbox {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color4;
+  }
+  &__h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-top: -3rem;
+    @media only screen and (max-width: $bp--767) {
+      font-size: 2.5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      text-align: center;
+    }
+    &--cilj {
+      &::after {
+        content: "";
+        border-bottom: 5px solid $color2;
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        width: 4.5rem;
+        @media only screen and (max-width: $bp--576) {
+          display: none;
+        }
+      }
+    }
+    &--misija {
+      text-align: end;
+      @media only screen and (max-width: $bp--576) {
+        text-align: center;
+      }
+      &::after {
+        content: "";
+        border-bottom: 5px solid $color2;
+        position: absolute;
+        top: 1.5rem;
+        right: 0;
+        width: 8rem;
+        @media only screen and (max-width: $bp--576) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__p {
+    &::first-letter {
+      text-transform: uppercase;
+      font-size: 3rem;
+      line-height: 1rem;
+    }
+    font-size: 2rem;
+    @media only screen and (max-width: $bp--767) {
+      font-size: 1.5rem;
+    }
+    &--misija {
+      text-align: end;
+    }
+  }
+}
