@@ -1,0 +1,49 @@
+.pageshero {
+  background: linear-gradient(to right top, #b9d8e5, #209fd8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140rem;
+    height: 25rem;
+    position: relative;
+    @media only screen and (max-width: $bp--992) {
+      height: 20rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      height: 15rem;
+    }
+  }
+  &__h1 {
+    color: $color4;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: 0.4rem;
+  }
+  &__img {
+    width: 39rem;
+    @media only screen and (max-width: $bp--1200) {
+      width: 35rem;
+    }
+    @media only screen and (max-width: $bp--992) {
+      width: 25rem;
+    }
+    @media only screen and (max-width: $bp--767) {
+      display: none;
+    }
+    &--left {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+    &--right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

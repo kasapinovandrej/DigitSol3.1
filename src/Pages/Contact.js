@@ -1,11 +1,19 @@
 import React from 'react'
+import PagesHeader from '../components/pagesHeader';
+import Hero1 from '../assets/img/CONTACT/Group 716.png';
+import Hero2 from '../assets/img/CONTACT/Group 727.png';
 
 const Contact = () => {
     return (
-
-        <div style={{ height: "55vh" }}>
-            Contact us
-        </div>
+        <>
+            <PagesHeader
+                img1={Hero1}
+                img2={Hero2}
+                title={'kontakt'} />
+            <div style={{ height: "55vh" }}>
+                Contact us
+            </div>
+        </>
     )
 }
 
