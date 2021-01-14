@@ -16,6 +16,9 @@
     @media only screen and (max-width: $bp--767) {
       height: 15rem;
     }
+    @media only screen and (max-width: $bp--576) {
+      height: 10rem;
+    }
   }
   &__h1 {
     color: $color4;
@@ -23,6 +26,9 @@
     font-size: 4rem;
     font-weight: 200;
     letter-spacing: 0.4rem;
+    @media only screen and (max-width: $bp--576) {
+      font-size: 3rem;
+    }
   }
   &__img {
     width: 39rem;

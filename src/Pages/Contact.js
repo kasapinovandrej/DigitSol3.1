@@ -1,5 +1,5 @@
 import React from 'react'
-import PagesHeader from '../components/pagesHeader';
+import PagesHeader from '../components/PagesHeader';
 import Hero1 from '../assets/img/CONTACT/Group 716.png';
 import Hero2 from '../assets/img/CONTACT/Group 727.png';
 
