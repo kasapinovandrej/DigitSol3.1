@@ -58,7 +58,7 @@ class Form extends Component {
 
             this.formResetInitialData()
         } else {
-            return null
+            return alert('Molim, unesite ime i prezime, e-mail i tekst poruke')
         }
 
 
