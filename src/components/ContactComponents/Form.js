@@ -7,7 +7,8 @@ class Form extends Component {
         name: '',
         email: '',
         message: '',
-        formModal: false
+        formModal: false,
+        validation: false
     }
 
     nameHandler = e => {
@@ -39,30 +40,34 @@ class Form extends Component {
         }, 3000)
     }
 
+
     submitHandler = (e) => {
         e.preventDefault();
-        this.setState({ formModal: true })
-        let data = {
-            name: this.state.name,
-            email: this.state.email,
-            message: this.state.message
+        const validation = this.state.name.trim() !== '' && this.state.email.trim !== '' && this.state.message.trim() !== '';
+
+        if (validation) {
+            this.setState({ formModal: true })
+            // let data = {
+            //     name: this.state.name,
+            //     email: this.state.email,
+            //     message: this.state.message
+            // }
+            // console.log(data);
+            const request = new XMLHttpRequest();
+            request.open("POST", "contact-form.php");
+
+            this.formResetInitialData()
+        } else {
+            return null
         }
 
-        const request = new XMLHttpRequest();
-        request.open("post", "contact-form.php");
-        request.onload = () => {
-            console.log(request.responseText);
-        }
-        request.send(data)
 
-        this.formResetInitialData()
     }
+
     render() {
         return (
             <form className="form"
-                onSubmit={this.submitHandler}
-                action="contact-form.php"
-                method="POST">
+                onSubmit={this.submitHandler}>
                 <div className="form__wrap">
                     <div className={this.state.formModal ? 'form__modal' : 'hide'}>
                         <p className="form__p">Hvala što ste nas kontaktirali!</p></div>
