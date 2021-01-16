@@ -1,0 +1,236 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  &__wrap {
+    width: 140rem;
+    text-align: center;
+    position: relative;
+  }
+  &__box {
+    background: $color1;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    width: 90rem;
+    height: 40rem;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.288);
+    @media only screen and (max-width: $bp--992) {
+      width: 80rem;
+    }
+
+    @media only screen and (max-width: $bp--767) {
+      flex-direction: column;
+      width: 55rem;
+      height: 80rem;
+      justify-content: inherit;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 35rem;
+      height: 65rem;
+    }
+    @media only screen and (max-width: $bp--361) {
+      width: 90%;
+      height: 60rem;
+    }
+  }
+  &__leftbox {
+    width: 40%;
+    position: relative;
+    @media only screen and (max-width: $bp--767) {
+      width: 100%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border: 1px solid $color2;
+      right: 0;
+      top: 10%;
+      height: 90%;
+      @media only screen and (max-width: $bp--767) {
+        height: 0;
+        width: 90%;
+        top: 90%;
+        right: 5%;
+      }
+    }
+  }
+  &__rightbox {
+    width: 60%;
+    position: relative;
+    @media only screen and (max-width: $bp--767) {
+      width: 100%;
+    }
+  }
+  &__h2 {
+    color: $color4;
+    font-size: 3rem;
+    text-align: left;
+    margin: 3rem;
+    position: relative;
+    @media only screen and (max-width: $bp--767) {
+      margin: 5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      font-size: 2.5rem;
+      margin: 2.5rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: 3px solid $color2;
+      bottom: 0;
+      left: 0;
+      width: 10rem;
+      @media only screen and (max-width: $bp--361) {
+        border: 2px solid $color2;
+      }
+    }
+  }
+  &__inputbox {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 3rem;
+    @media only screen and (max-width: $bp--767) {
+      margin: 5rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      margin: 3rem 2.5rem;
+    }
+  }
+  &__messagebox {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    width: 25rem;
+    background: $color1;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid $color4;
+    color: $color4;
+    padding: 0.8rem;
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp--767) {
+      width: 40rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 28rem;
+    }
+    @media only screen and (max-width: $bp--361) {
+      width: 90%;
+    }
+    &::placeholder {
+      color: $color4;
+    }
+    &:focus:invalid {
+      border-bottom: 3px solid rgb(255, 0, 0);
+    }
+    &:placeholder-shown + .form__label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+  }
+
+  &__label {
+    width: fit-content;
+    color: $color4;
+    margin: 1rem 0.8rem;
+    transition: all 0.3s;
+    @media only screen and (max-width: $bp--576) {
+      font-size: 1rem;
+    }
+  }
+  &__message {
+    color: $color4;
+    font-size: 2rem;
+    text-align: left;
+    margin: 2rem 3rem;
+    @media only screen and (max-width: $bp--576) {
+      font-size: 1.5rem;
+      margin: 0 2.5rem;
+    }
+  }
+  &__textarea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 70%;
+    background: $color1;
+    border: none;
+    outline: none;
+    color: $color4;
+    @media only screen and (max-width: $bp--767) {
+      height: 25rem;
+      margin-top: 15rem;
+    }
+    @media only screen and (max-width: $bp--576) {
+      height: 22rem;
+    }
+    @media only screen and (max-width: $bp--361) {
+      margin-top: 13rem;
+      height: 21rem;
+    }
+
+    &::placeholder {
+      color: $color3;
+      font-family: inherit;
+    }
+  }
+  &__button {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-transform: uppercase;
+    background: $color2;
+    color: $color4;
+    border: none;
+    outline: none;
+    transition: all 0.5s;
+    @media only screen and (max-width: $bp--767) {
+      left: 0;
+      bottom: -33rem;
+    }
+    @media only screen and (max-width: $bp--361) {
+      bottom: -28.1rem;
+    }
+    &:hover {
+      background: $color4;
+      color: $color1;
+    }
+    &:active {
+      transform: translateY(5px);
+    }
+  }
+  &__spaceman {
+    position: absolute;
+    right: 0;
+    top: -12.5rem;
+    width: 15rem;
+    @media only screen and (max-width: $bp--767) {
+      display: none;
+    }
+  }
+  &__modal {
+    position: absolute;
+    @include flexCenter;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 40rem;
+    height: 30rem;
+    background-color: rgba(204, 204, 204, 0.438);
+    border-radius: 2rem;
+  }
+  &__p {
+    color: $color4;
+    font-size: 3rem;
+  }
+}

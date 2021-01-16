@@ -6,18 +6,23 @@ const contactData = [
         icon: IoPhonePortraitOutline,
         title: 'telefon',
         text1: '(00381)63-78-28-541',
-        text2: '(00381)69-44-89-990'
+        text2: '(00381)69-44-89-990',
+        href1: 'tel:(00381)63-78-28-541',
+        href2: 'tel:(00381)69-44-89-990',
     },
     {
         icon: IoLocationSharp,
         title: 'Adresa',
         text1: 'Kraljevo, Srbija',
-        text2: 'Novi Pazar, Srbija'
+        text2: 'Novi Pazar, Srbija',
+        href1: '#',
+        href2: '#',
     },
     {
         icon: IoMailOutline,
         title: 'E-mail',
         text1: 'office@digitalsolution.rs',
+        href1: 'mailto:office@digitalsolution.rs',
     }
 ]
 
@@ -32,17 +37,11 @@ const ContactInfo = () => {
                             <div className="contactinfo__content" key={`${element.title}`}>
                                 <element.icon className="contactinfo__icon" />
                                 <h3 className="contactinfo__h3">{element.title}</h3>
-                                {element.title === 'E-mail' ?
-                                    <a className="contactinfo__a" href={`mailto:${element.text1}`}>
-                                        <p className="contactinfo__p">{element.text1}</p>
-                                    </a>
-                                     :
-                                    <a className="contactinfo__a" href={`tel:${element.text1}`}>
-                                        <p className="contactinfo__p">{element.text1}</p>
-                                    </a>}
-
+                                <a href={element.href1} className="contactinfo__a">
+                                    <p className="contactinfo__p">{element.text1}</p>
+                                </a>
                                 {element.text2 ?
-                                    <a className="contactinfo__a" href={`tel:${element.text2}`}>
+                                    <a className="contactinfo__a" href={element.href2}>
                                         <p className="contactinfo__p">{element.text2}</p>
                                     </a> :
                                     null}
