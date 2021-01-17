@@ -10,7 +10,7 @@ const Portfolio = () => {
                 title={'portfolio'}
             />
             <div style={{ height: "55vh" }}>
-                Portfolio
+                <h1 style={{ textAlign: 'center', color: '#197daa' }}>Portfolio -- uskoro :)</h1>
             </div>
         </>
     )
