@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Spaceman from '../../assets/img/Group 667.png';
+import axios from 'axios';
 
 class Form extends Component {
 
@@ -7,69 +8,62 @@ class Form extends Component {
         name: '',
         email: '',
         message: '',
-        formModal: false,
-        validation: false
+        sent: false
     }
 
-    nameHandler = e => {
+    //handle inputs
+    handleName = (e) => {
         this.setState({
-            name: e.target.value,
+            name: e.target.value
         })
     }
-    emailHandler = e => {
+    handleEmail = (e) => {
         this.setState({
-            email: e.target.value,
+            email: e.target.value
         })
     }
-    messageHandler = e => {
+    handleMessage = (e) => {
         this.setState({
-            message: e.target.value,
+            message: e.target.value
         })
     }
 
-    formResetInitialData = () => {
+    resetForm = () => {
         this.setState({
             name: '',
             email: '',
             message: '',
         })
+
         setTimeout(() => {
-            this.setState({
-                formModal: false
-            })
+            this.setState({ sent: false })
         }, 3000)
     }
 
-
-    submitHandler = (e) => {
+    formSubmit = (e) => {
         e.preventDefault();
-        const validation = this.state.name.trim() !== '' && this.state.email.trim !== '' && this.state.message.trim() !== '';
-
-        if (validation) {
-            this.setState({ formModal: true })
-            // let data = {
-            //     name: this.state.name,
-            //     email: this.state.email,
-            //     message: this.state.message
-            // }
-            // console.log(data);
-            const request = new XMLHttpRequest();
-            request.open("POST", "contact-form.php");
-
-            this.formResetInitialData()
-        } else {
-            return alert('Molim, unesite ime i prezime, e-mail i tekst poruke')
+        let data = {
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
         }
-
-
+        axios.post('/api/forma', data)
+            .then(res => {
+                this.setState({
+                    sent: true,
+                }, this.resetForm())
+            })
+            .catch(err => {
+                console.log('Poruka nije poslata');
+            })
     }
+
 
     render() {
         return (
-            <form className="form"
-                onSubmit={this.submitHandler}>
+            <form className="form" onSubmit={this.formSubmit}>
                 <div className="form__wrap">
-                    <div className={this.state.formModal ? 'form__modal' : 'hide'}>
+                    <div className={this.state.sent ? 'form__modal' : 'hide'} >
                         <p className="form__p">Hvala što ste nas kontaktirali!</p></div>
                     <div className="form__box">
                         <img src={Spaceman} alt="spaceman" className="form__spaceman" />
@@ -77,20 +71,20 @@ class Form extends Component {
                             <h2 className="form__h2">Pišite nam</h2>
                             <div className="form__inputbox">
                                 <input className="form__input"
-                                    onChange={this.nameHandler}
                                     name="name"
                                     type="text"
+                                    placeholder="Ime i prezime"
                                     value={this.state.name}
-                                    placeholder="Ime i prezime" />
+                                    onChange={this.handleName} />
                                 <label htmlFor="name" className="form__label">Ime i prezime</label>
                             </div>
                             <div className="form__inputbox">
                                 <input className="form__input"
-                                    onChange={this.emailHandler}
                                     name="email"
                                     type="email"
-                                    value={this.state.email}
-                                    placeholder="E-mail Adresa" />
+                                    placeholder="E-mail Adresa"
+                                    onChange={this.handleEmail}
+                                    value={this.state.email} />
                                 <label htmlFor="email" className="form__label" >E-mail adresa</label>
                             </div>
                         </div>
@@ -98,10 +92,10 @@ class Form extends Component {
                             <div className="form__messagebox">
                                 <label htmlFor="text" className="form__message">Vaša poruka</label>
                                 <textarea className="form__textarea"
-                                    onChange={this.messageHandler}
                                     name="message"
+                                    placeholder="Unesite Vašu poruku ovde..."
                                     value={this.state.message}
-                                    placeholder="Unesite Vašu poruku ovde..."></textarea>
+                                    onChange={this.handleMessage}></textarea>
                             </div>
                             <button className="form__button" type="submit">pošaljite poruku</button>
                         </div>
@@ -111,5 +105,6 @@ class Form extends Component {
         )
     }
 }
+
 
 export default Form;

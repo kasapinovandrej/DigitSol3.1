@@ -193,6 +193,7 @@
     border: none;
     outline: none;
     transition: all 0.5s;
+    cursor: pointer;
     @media only screen and (max-width: $bp--767) {
       left: 0;
       bottom: -33rem;
