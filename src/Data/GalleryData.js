@@ -21,7 +21,7 @@ const GallerySmall = [
         filter: "Web dizajn",
         alt: "1Small",
         id: 1,
-        link: "#",
+        link: "https://natours-andrejkasapinov.netlify.app/",
         design: "Jonas Schmedtmann"
     },
     {
@@ -30,7 +30,7 @@ const GallerySmall = [
         filter: "Web dizajn",
         alt: "2Small",
         id: 2,
-        link: "#",
+        link: "https://omnifood-andrejkasapinov.netlify.app/",
         design: "Jonas Schmedtmann"
     },
     {
@@ -39,7 +39,7 @@ const GallerySmall = [
         filter: "Web dizajn",
         alt: "3Small",
         id: 3,
-        link: "#",
+        link: "https://radiokvb.netlify.app/",
         design: "Digital Solution"
     },
     {
@@ -48,7 +48,7 @@ const GallerySmall = [
         filter: "Web dizajn",
         alt: "4Small",
         id: 4,
-        link: "#",
+        link: "https://trillo-andrejkasapinov.netlify.app/",
         design: "Jonas Schmedtmann"
     },
     {
@@ -75,7 +75,7 @@ const GallerySmall = [
         filter: "Web dizajn",
         alt: "7Small",
         id: 7,
-        link: "#",
+        link: "https://ecco.rs/",
         design: "Digital Solution"
     },
     {
@@ -147,7 +147,7 @@ const GallerySmall = [
         filter: "Web dizajn",
         alt: "15Small",
         id: 15,
-        link: "#",
+        link: "https://bankistsite-andrejkasapinov.netlify.app/?",
         design: "Jonas Schmedtmann"
     },
 ]

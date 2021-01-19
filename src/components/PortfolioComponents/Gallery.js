@@ -52,8 +52,6 @@ class Gallery extends Component {
         });
     }
     nextSlide = () => {
-        console.log(GallerySmall.length);
-        console.log(this.state.currentImage);
         if (this.state.currentImage < GallerySmall.length - 1) {
             this.setState({
                 currentImage: this.state.currentImage + 1
@@ -66,8 +64,6 @@ class Gallery extends Component {
     }
 
     prevSlide = () => {
-        console.log(GallerySmall.length - 1);
-        console.log(this.state.currentImage);
         if (this.state.currentImage > 0) {
             this.setState({
                 currentImage: this.state.currentImage - 1
@@ -114,6 +110,7 @@ class Gallery extends Component {
                     </div>
                 </div>
                 <div className={this.state.modal ? "modal" : "hide"}>
+                    <div className="modal__back" onClick={this.closeModal}></div>
                     <div className="modal__glass">
                         <button className="modal__close" onClick={this.closeModal}> <VscChromeClose /></button>
                         <div className="modal__leftbox">
@@ -124,7 +121,7 @@ class Gallery extends Component {
                         </div>
                         <div className="modal__rightbox">
                             <div className="modal__rightboxwrap">
-                                <a href={all[this.state.currentImage].link} className="modal__linkbox">
+                                <a target="_blank" rel="noreferrer" href={all[this.state.currentImage].link} className="modal__linkbox">
                                     <FiExternalLink className="modal__icon" />
                                     <div>
                                         <h2 className="modal__h2">Web stranica</h2>
@@ -134,7 +131,7 @@ class Gallery extends Component {
                                 <div className="modal__linkbox" onClick={this.nextSlide}>
                                     <MdSkipNext className="modal__icon" />
                                     <div>
-                                        <h2 className="modal__h2">Sledeca</h2>
+                                        <h2 className="modal__h2">Sledeća</h2>
                                         <p className="modal__p">{all[this.state.currentImage + 1 < 14 ? this.state.currentImage + 1 : 0].title}</p>
                                     </div>
                                 </div>

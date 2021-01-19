@@ -50,6 +50,7 @@
     font-size: 2rem;
     cursor: pointer;
     z-index: 10;
+    @include flexCenter;
     @media only screen and (min-width: $bp--767) {
       display: none;
     }

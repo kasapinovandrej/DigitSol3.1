@@ -2,6 +2,7 @@ import React from 'react';
 import PagesHeader from '../components/PagesHeader';
 import HeroImg from '../assets/img/PORTFOLIO/Group 1036.png';
 import Gallery from '../components/PortfolioComponents/Gallery';
+import Watermarks from '../components/PortfolioComponents/Watermarks';
 
 const Portfolio = () => {
     return (
@@ -11,9 +12,7 @@ const Portfolio = () => {
                 title={'portfolio'}
             />
             <Gallery />
-            {/* <div style={{ height: "55vh" }}>
-                <h1 style={{ textAlign: 'center', color: '#197daa' }}>Portfolio -- uskoro :)</h1>
-            </div> */}
+            <Watermarks />
         </>
     )
 }

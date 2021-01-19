@@ -1,0 +1,13 @@
+.svg {
+  @include flexCenter;
+
+  &__img {
+    font-size: 10rem;
+    color: $color6;
+    margin: 5rem 1rem;
+    @media only screen and (max-width: $bp--767) {
+      font-size: 6rem;
+      margin: 3rem 0.5rem;
+    }
+  }
+}

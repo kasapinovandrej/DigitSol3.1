@@ -8,8 +8,14 @@
   width: 100%;
   z-index: 10;
   @include flexCenter;
-
   backdrop-filter: blur(8px);
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   &__glass {
     background: white;
     min-height: 70vh;
@@ -22,12 +28,29 @@
     background: rgba(255, 255, 255, 0.863);
     display: flex;
     box-shadow: 4px 6px #42424218;
+    z-index: 20;
+    @media only screen and (max-width: $bp--1400) {
+      width: 80%;
+    }
+    @media only screen and (max-width: $bp--992) {
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.644);
+    }
+    @media only screen and (max-width: $bp--767) {
+      flex-direction: column;
+    }
   }
   &__leftbox {
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    @media only screen and (max-width: $bp--767) {
+      width: 100%;
+      height: 60%;
+    }
   }
   &__h1 {
     display: inline-block;
@@ -50,12 +73,24 @@
   &__img {
     width: 90%;
     height: auto;
+    @media only screen and (max-width: $bp--767) {
+      height: 90%;
+      width: auto;
+    }
+    @media only screen and (max-width: $bp--576) {
+      width: 90%;
+      height: auto;
+    }
   }
   &__rightbox {
     width: 40%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    @media only screen and (max-width: $bp--767) {
+      width: 100%;
+      height: 40%;
+    }
   }
   &__rightboxwrap {
     position: relative;
@@ -81,6 +116,9 @@
     align-items: center;
     color: $color1;
     transition: all 0.5s;
+    @media only screen and (max-width: $bp--767) {
+      margin: 0;
+    }
 
     cursor: pointer;
     &:hover {
@@ -127,5 +165,11 @@
     right: 15%;
     cursor: pointer;
     outline: none;
+    @media only screen and (max-width: $bp--1400) {
+      right: 5%;
+    }
+    @media only screen and (max-width: $bp--992) {
+      top: 5%;
+    }
   }
 }
