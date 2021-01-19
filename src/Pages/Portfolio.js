@@ -1,6 +1,7 @@
 import React from 'react';
 import PagesHeader from '../components/PagesHeader';
 import HeroImg from '../assets/img/PORTFOLIO/Group 1036.png';
+import Gallery from '../components/PortfolioComponents/Gallery';
 
 const Portfolio = () => {
     return (
@@ -9,9 +10,10 @@ const Portfolio = () => {
                 img2={HeroImg}
                 title={'portfolio'}
             />
-            <div style={{ height: "55vh" }}>
+            <Gallery />
+            {/* <div style={{ height: "55vh" }}>
                 <h1 style={{ textAlign: 'center', color: '#197daa' }}>Portfolio -- uskoro :)</h1>
-            </div>
+            </div> */}
         </>
     )
 }

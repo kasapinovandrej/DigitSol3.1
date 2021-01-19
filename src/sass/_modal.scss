@@ -1,0 +1,131 @@
+.modal {
+  background: #197ba97e;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  @include flexCenter;
+
+  backdrop-filter: blur(8px);
+  &__glass {
+    background: white;
+    min-height: 70vh;
+    width: 60%;
+    // background: linear-gradient(
+    //   to right bottom,
+    //   rgba(255, 255, 255, 0.7),
+    //   rgba(255, 255, 255, 0.3)
+    // );
+    background: rgba(255, 255, 255, 0.863);
+    display: flex;
+    box-shadow: 4px 6px #42424218;
+  }
+  &__leftbox {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__h1 {
+    display: inline-block;
+    position: relative;
+    color: $color1;
+    margin-left: 5%;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 2.5rem;
+    &::after {
+      content: "";
+      border: 2px solid $color1;
+      width: 5rem;
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+    }
+  }
+  &__img {
+    width: 90%;
+    height: auto;
+  }
+  &__rightbox {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &__rightboxwrap {
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid $color1;
+      width: 90%;
+      right: 5%;
+    }
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      bottom: -1rem;
+    }
+  }
+  &__linkbox {
+    position: relative;
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    color: $color1;
+    transition: all 0.5s;
+
+    cursor: pointer;
+    &:hover {
+      color: $color2;
+      background: rgb(233, 233, 233);
+    }
+    &:active {
+      color: $color4;
+      background: rgb(199, 198, 198);
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      border-bottom: 1px solid $color3;
+      width: 90%;
+      right: 5%;
+      bottom: -0.5rem;
+    }
+    &:last-child::before {
+      border-bottom: none;
+    }
+  }
+  &__icon {
+    flex-shrink: 0;
+    font-size: 2rem;
+    margin: 0 2rem;
+  }
+  &__h2 {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  &__p {
+    color: $color3;
+  }
+  &__close {
+    @include flexCenter;
+    color: $color1;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 200;
+    font-size: 3rem;
+    right: 15%;
+    cursor: pointer;
+    outline: none;
+  }
+}
