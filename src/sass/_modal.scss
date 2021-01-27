@@ -162,14 +162,12 @@
     position: absolute;
     z-index: 200;
     font-size: 3rem;
-    right: 15%;
+    right: -5%;
     cursor: pointer;
     outline: none;
-    @media only screen and (max-width: $bp--1400) {
-      right: 5%;
-    }
     @media only screen and (max-width: $bp--992) {
       top: 5%;
+      right: 5%;
     }
   }
 }

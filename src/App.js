@@ -1,5 +1,5 @@
 
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './main.scss';
 import ScrollToTop from './Pages/ScrollToTop';
 import Home from './Pages/Home';
@@ -15,21 +15,19 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <BrowserRouter >
-      <div className="App">
-        <ScrollToTop />
-        <Header />
-        <Navigation />
-        <BurgerMenu />
-        <Switch >
-          <Route path="/portfolio" exact component={Portfolio} />
-          <Route path="/about" component={AboutUs} />
-          <Route path="/contact" exact component={Contact} />
-          <Route path="/" component={Home} />
-        </Switch>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <ScrollToTop />
+      <Header />
+      <Navigation />
+      <BurgerMenu />
+      <Switch >
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/about" component={AboutUs} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/" component={Home} />
+      </Switch>
+      <Footer />
+    </div>
   );
 }
 

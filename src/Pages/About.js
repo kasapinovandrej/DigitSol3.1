@@ -4,7 +4,6 @@ import HeroImg from '../assets/img/ABOUT/Group 842.png';
 import Mission from '../components/AboutUsComponent/Mission';
 import Target from '../components/AboutUsComponent/Target';
 
-
 const About = () => {
     return (
         <>

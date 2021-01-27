@@ -1,6 +1,7 @@
 import React from 'react';
 
 const pagesHeader = (props) => {
+
     return (
         <section className="pageshero">
             <div className='pageshero__wrap'>

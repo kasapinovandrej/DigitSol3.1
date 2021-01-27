@@ -47,6 +47,7 @@
     outline: none;
     border-color: $color1;
     color: $color1;
+    background-color: $color4;
     font-size: 2rem;
     cursor: pointer;
     z-index: 10;
@@ -88,6 +89,16 @@
       display: inline-block;
       background: $color1;
       transform: translateX(-1rem);
+    }
+  }
+  &__fixed {
+    position: fixed;
+    top: 0;
+    background: $color3;
+    z-index: 10;
+    width: 100%;
+    @media only screen and (max-width: $bp--767) {
+      position: static;
     }
   }
 }

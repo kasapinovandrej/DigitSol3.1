@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer__rights">
-                <h2 className="footer__textrights">&copy; 2020. Digital Solution. All rights reserved!</h2>
+                <h2 className="footer__textrights">&copy; {new Date().getFullYear()}. Digital Solution. All rights reserved!</h2>
             </div>
         </footer>
     )
